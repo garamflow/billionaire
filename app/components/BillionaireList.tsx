@@ -1,4 +1,5 @@
 "use client";
+import { formatNetWorth } from "@/utils/formatNetWorth";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -7,7 +8,7 @@ interface Billionaire {
 	id: string;
 	name: string;
 	squareImage: string;
-	netWorth: string;
+	netWorth: number;
 	industries: string[];
 }
 
@@ -45,7 +46,7 @@ export default function BillionaireList() {
 							className='w-full h-48 object-cover rounded mb-4'
 						/>
 						<h2>{billionaire.name}</h2>
-						<p>{`${billionaire.netWorth} / ${billionaire.industries}`}</p>
+						<p>{`${formatNetWorth(billionaire.netWorth)} / ${billionaire.industries}`}</p>
 					</div>
 				</Link>
 			))}
