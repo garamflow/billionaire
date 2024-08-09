@@ -36,7 +36,7 @@ export default function BillionaireList() {
 					href={`/person/${billionaire.id}`}
 					key={billionaire.id}
 				>
-					<div className='border p-4 rounded shadow hover:scale-105 transition'>
+					<div className='border p-4 rounded shadow hover:scale-105 transition h-80'>
 						<Image
 							src={billionaire.squareImage}
 							alt={billionaire.name}
